@@ -15,5 +15,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:card" content="summary" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} />
     <title>{title}</title>
   </head>
-  <body><a class="skip-link" href="#content">Skip to content</a><slot /></body>
+  <body>
+    <script is:inline>
+      const savedTheme = localStorage.getItem('theme');
+      document.documentElement.dataset.theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    </script>
+    <a class="skip-link" href="#content">Skip to content</a><slot />
+  </body>
 </html>
