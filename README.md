@@ -23,4 +23,4 @@ Place approved assets under `public/projects/<project-slug>/`. Add their site pa
 
 ## Deployment
 
-The GitHub Pages workflow at `.github/workflows/deploy.yml` runs when `main` is updated. In repository settings, set Pages **Source** to **GitHub Actions**. The Astro config is set for the account-site URL `https://mrodriguezalas.github.io` and no path prefix, matching the requested deployment URL.
+The GitHub Pages workflow at `.github/workflows/deploy.yml` runs when `master` is updated. In repository settings, set Pages **Source** to **GitHub Actions**. The Astro config is set for the account-site URL `https://mrodriguezalas.github.io` and no path prefix, matching the requested deployment URL.
